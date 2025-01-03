@@ -1,11 +1,11 @@
- // CSS dosyasını import ediyoruz
 import './assets/style.css'
-
-// Vue'nun createApp fonksiyonunu import ediyoruz
 import { createApp } from 'vue'
-
-// Kök bileşen olan App.vue dosyasını import ediyoruz
 import App from './App.vue'
+import Toast from 'vue-toastification';
+import 'vue-toastification/dist/index.css';
 
 // Vue uygulamasını oluşturup #app elementine mount ediyoruz
-createApp(App).mount('#app')
+const app = createApp(App);
+app.use(Toast);
+
+app.mount('#app')
